@@ -1,0 +1,14 @@
+Tema 1 POO - Mardale Andrei-Iulian 321CB
+
+Clase:
+	Element (abstract) - implementeaza TrieElement, are rolul de a stoca valoarea nodului din Trie si ofera functionalitati de baza - comparare si mapare cod ASCII - index
+	Trie - implementeaza AbstractTrie si implementeaza add, remove, count si getSortedElement - aici este definit comportamentul de trie
+	CaseInsensitiveElement, SymbolInsensitiveElement - mostenesc Element si implementeaza toCharArray; aici apare diferentierea de comportament pentru elemente
+
+Pot intoarce elementele sortate (printr-o parcurgere in preordine) deoarece in clasa Element am o functie care mapeaza 1:1 valoarea ascii cu un index din Trie, indecsii fiind definiti astfel in cat sa se pastreze ordinea dorita.
+
+De mentionat ca metoda toCharArray nu va intoarce un array ce contine codificarea ascii a caracterelor ci un array care contine indecsii caracterelor, adica calea din trie ce trebuie parcursa.
+
+Aceasta implementare are avantajul ca pot adauga in acelasi Trie elemente de tipuri diferite (CaseInsensitive si SymbolInsensitive). (nu stiu la ce foloseste chestia asta, dar mi s-a parut interesanta)
+
+Mi s-a parut mai natural si mai general sa implementez un singur Trie, iar diferentierea de comportament sa se faca la nivelul elementului. De asemenea asa mi se pare ca am putut scrie mai putin cod.
